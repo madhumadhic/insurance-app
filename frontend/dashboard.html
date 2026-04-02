@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SmartCover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="header-icon">🏠</div>
+      <h1 class="header-title">Dashboard</h1>
+      <p class="header-subtitle">Welcome back!</p>
+    </div>
+
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <div id="userProfile" style="font-size: 24px;">Loading...</div>
+        <span id="policyStatusDash" class="status-badge">Loading...</span>
+      </div>
+
+      <div class="premium-card" style="margin-bottom: 32px;">
+        <div style="font-size: 14px; opacity: 0.9;">Weekly Premium</div>
+        <div id="dashboardPremium" class="premium-value">₹0</div>
+        <div style="font-size: 14px; opacity: 0.8;">Auto-charged</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px;">
+        <button onclick="goToPolicy()" class="btn btn-secondary">📜 Policy</button>
+        <button onclick="goToClaims()" class="btn btn-secondary">💰 Claims</button>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 16px;">
+        <div>
+          <div id="claimsCount" style="font-size: 14px; color: var(--text-gray);">0 Claims</div>
+          <div id="totalPayouts" style="font-size: 20px; font-weight: 600; color: var(--accent-green);">₹0</div>
+        </div>
+        <div style="font-size: 48px;">📊</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <button onclick="testClaim('Heavy Rain', 750)" class="btn btn-secondary">🌧️ Test Rain</button>
+      <button onclick="testClaim('Flash Flood', 1500)" class="btn btn-secondary">🌊 Test Flood</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
