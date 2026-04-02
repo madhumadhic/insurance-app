@@ -27,19 +27,28 @@ function previewPremium() {
   }
 }
 
-function handleRegistration(e) {
+async function handleRegistration(e) {
   e.preventDefault();
-  
-  appState.user = {
+
+  const userData = {
     name: document.getElementById('userName').value,
     phone: document.getElementById('userPhone').value,
     zone: document.getElementById('workZone').value
   };
-  
-  appState.policy.zone = appState.user.zone;
-  appState.policy.premium = ZONE_PREMIUMS[appState.user.zone].total;
-  
+
+  // 🔗 SEND DATA TO BACKEND
+  await fetch('http://localhost:5000/api/users/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  });
+
+  // existing logic
+  appState.user = userData;
   localStorage.setItem('smartcoverApp', JSON.stringify(appState));
+
   window.location.href = 'policy.html';
 }
 
