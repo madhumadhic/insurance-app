@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy - SmartCover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="register.html" class="back-btn">←</a>
+  
+  <div class="app">
+    <div class="header">
+      <div class="header-icon">📜</div>
+      <h1 class="header-title">Policy Management</h1>
+      <p class="header-subtitle">Step 2/4 - Setup Coverage</p>
+    </div>
+
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+        <div>
+          <h2 style="font-size: 24px; margin-bottom: 8px;">WeatherGuard Policy</h2>
+          <p style="color: var(--text-gray);">₹5,000 per weather event</p>
+        </div>
+        <span id="policyStatus" class="status-badge">Inactive</span>
+      </div>
+
+      <div class="premium-card" id="policyPremiumCard">
+        <div>Calculated Premium</div>
+        <div class="premium-value" id="policyPremiumAmount">₹0/wk</div>
+        <div>Auto-renews weekly</div>
+      </div>
+
+      <button onclick="activateCoverage()" class="btn btn-primary">
+        ✅ Activate Policy → Premium
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

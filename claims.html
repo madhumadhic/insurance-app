@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claims - SmartCover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="premium.html" class="back-btn">←</a>
+  
+  <div class="app">
+    <div class="header">
+      <div class="header-icon">💰</div>
+      <h1 class="header-title">Claims Center</h1>
+      <p class="header-subtitle">Step 4/4 - Ready to Claim!</p>
+    </div>
+
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+        <div>
+          <h2 style="font-size: 24px;">Payout History</h2>
+          <p style="color: var(--text-gray);">Total Paid: <span id="totalPaid" style="color: var(--accent-green); font-weight: 600;">₹0</span></p>
+        </div>
+        <span class="status-badge">Active Policy</span>
+      </div>
+
+      <div id="claimsContainer">
+        <div style="text-align: center; padding: 48px 24px; color: var(--text-gray);">
+          <div style="font-size: 56px; margin-bottom: 24px;">🎉</div>
+          <h3 style="margin-bottom: 12px;">No Claims Yet</h3>
+          <p>Test weather events below</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <button class="btn btn-secondary" onclick="testClaim('Heavy Rain', 750)">🌧️ Rain</button>
+        <button class="btn btn-secondary" onclick="testClaim('Flood', 1500)">🌊 Flood</button>
+        <button class="btn btn-secondary" onclick="testClaim('Storm', 1200)">⚡ Storm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

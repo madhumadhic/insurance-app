@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - SmartCover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="index.html" class="back-btn">←</a>
+  
+  <div class="app">
+    <div class="header">
+      <div class="header-icon">👤</div>
+      <h1 class="header-title">Create Account</h1>
+      <p class="header-subtitle">Step 1/4 - Registration</p>
+    </div>
+
+    <div class="card">
+      <form onsubmit="handleRegistration(event)">
+        <div class="form-input-wrapper">
+          <input class="form-input" type="text" id="userName" placeholder="Full Name" required>
+        </div>
+        
+        <div class="form-input-wrapper">
+          <input class="form-input" type="tel" id="userPhone" placeholder="Phone Number" required>
+        </div>
+        
+        <div class="form-input-wrapper">
+          <select class="form-input" id="workZone" onchange="previewPremium()">
+            <option value="">Select Work Zone</option>
+            <option value="zone1">🟢 Zone 1 - Safe Area</option>
+            <option value="zone2">🟡 Zone 2 - Medium Risk</option>
+            <option value="zone3">🔴 Zone 3 - High Risk</option>
+          </select>
+        </div>
+
+        <div id="premiumPreview" style="display: none;" class="premium-card">
+          <div>Weekly Premium</div>
+          <div class="premium-value" id="previewAmount">₹0</div>
+          <div style="opacity: 0.9;">Coverage: ₹5000/event</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="nextBtn" disabled>
+          Next: Policy Setup →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
